@@ -1,0 +1,6 @@
+# ignore IDE specific files
+.idea/
+.vscode/
+*.sw*
+
+.DS_Store

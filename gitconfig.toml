@@ -1,0 +1,52 @@
+[core]
+	editor = nvim
+  pager = delta
+  excludesfile = ~/.config/core-config/gitignore-global
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  line-numbers = true
+  side-by-side = true
+
+[commit]
+	template = ~/.config/core-config/gitmessage-template
+
+[merge]
+  conflictstyle = diff3
+  tool = nvimdiff4
+
+[mergetool "nvimdiff4"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
+  cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[diff]
+  colorMoved = default
+  tool = nvimdiff
+
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE -c 'wincmd w' -c 'wincmd L'
+
+[alias]
+	s = status
+
+[user]
+	name = Oleksandr B.
+	email = oleksandr.bi@paymentop.com
+
+[delta "interactive"]
+  keep-plus-minus-markers = false
+
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style = file line-number syntax
+
+[init]
+	defaultBranch = main
