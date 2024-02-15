@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Common aliases
-# ---
+alias lg="lazygit"
 
 # IDE Aliases
 alias cvim="NVIM_APPNAME=NvChad nvim"
